@@ -1,0 +1,25 @@
+{
+  "short_name": "Echo",
+  "name": "Echo | John Ogletree Portfolio",
+  "description": "Digital Creator & Designer Portfolio",
+  "icons": [
+    {
+      "src": "/assets/images/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#3B2F2A",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#E07A5F",
+  "orientation": "portrait-primary"
+}
