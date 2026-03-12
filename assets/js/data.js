@@ -11,16 +11,15 @@ const DATA = {
         projects: {
             title: "My Work",
             description: "A collection of digital solutions and creative experiments."
+        },
+        // ADD THIS SECTION:
+        404: {
+            title: "404 - Lost in Echo",
+            description: "The digital path you're looking for doesn't exist or has been moved."
         }
     },
-    skills: [
-        { name: "UI Design", progress: 95 },
-        { name: "Frontend", progress: 90 }
-    ],
-    projects: [
-        { title: "Project Alpha", description: "A modular web application." },
-        { title: "Project Beta", description: "An interactive PWA experience." }
-    ]
+    skills: [ /* your skills */ ],
+    projects: [ /* your projects */ ]
 };
 
 export default DATA;
