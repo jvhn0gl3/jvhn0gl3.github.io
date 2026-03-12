@@ -1,22 +1,25 @@
 const DATA = {
     profile: {
         name: "John Ogletree",
-        role: "Digital Creator & Designer",
-        location: "Georgia, USA",
-        bio: "Crafting digital solutions with precision and aesthetic excellence."
+        bio: "Digital Creator & Designer based in Georgia."
+    },
+    pages: {
+        about: {
+            title: "About Me",
+            description: "A deeper look into my process and background."
+        },
+        projects: {
+            title: "My Work",
+            description: "A collection of digital solutions and creative experiments."
+        }
     },
     skills: [
-        { name: "UI Design", progress: 90, icon: "fa-layer-group" },
-        { name: "Web Development", progress: 85, icon: "fa-code" },
-        { name: "Digital Strategy", progress: 80, icon: "fa-chart-line" }
+        { name: "UI Design", progress: 95 },
+        { name: "Frontend", progress: 90 }
     ],
     projects: [
-        {
-            title: "Echo Portfolio",
-            description: "A high-performance PWA portfolio built with modular JS.",
-            tags: ["Tailwind", "PWA", "Vanilla JS"],
-            link: "#"
-        }
+        { title: "Project Alpha", description: "A modular web application." },
+        { title: "Project Beta", description: "An interactive PWA experience." }
     ]
 };
 
