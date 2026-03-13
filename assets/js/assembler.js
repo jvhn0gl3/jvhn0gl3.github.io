@@ -1,3 +1,8 @@
+/**
+ * Atomic Assembler - Production Version
+ * Fixes 404s by using relative pathing (./)
+ */
+
 const headModules = [
     './src/head/01-title.html',
     './src/head/02-charset.html',
@@ -21,30 +26,33 @@ const bodyModules = [
     './src/body/06-sw-reg.html'
 ];
 
-async function build() {
+async function assembleSite() {
     try {
-        // Inject Head
+        // Build Head
         for (const path of headModules) {
             const res = await fetch(path);
-            if (!res.ok) throw new Error(`Failed to load ${path}`);
+            if (!res.ok) throw new Error(`Status ${res.status} for ${path}`);
             const html = await res.text();
             document.head.insertAdjacentHTML('beforeend', html);
         }
-        
-        // Inject Body
+
+        // Build Body
         for (const path of bodyModules) {
             const res = await fetch(path);
-            if (!res.ok) throw new Error(`Failed to load ${path}`);
+            if (!res.ok) throw new Error(`Status ${res.status} for ${path}`);
             const html = await res.text();
             document.body.insertAdjacentHTML('beforeend', html);
         }
-
-        console.log("Assembly Complete: Echo is live.");
+        
+        console.log("Echo Assembled Successfully.");
     } catch (err) {
-        console.error("Assembly Failed:", err);
-        // Fallback: Show a message on the screen if it fails
-        document.body.innerHTML = `<div style="color:white; padding:20px;">Error loading site components. Check console.</div>`;
+        console.error("Assembly Error:", err.message);
+        document.body.insertAdjacentHTML('afterbegin', 
+            `<div style="background:red; color:white; padding:10px; font-family:monospace;">
+                ERROR: ${err.message}. Check if /src/ folders exist.
+            </div>`
+        );
     }
 }
 
-build();
+assembleSite();
