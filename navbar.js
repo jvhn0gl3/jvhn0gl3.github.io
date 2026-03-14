@@ -1,68 +1,114 @@
 const navbarHTML = `
-<header id="site-header" class="sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-border bg-surface p-4 px-4 md:px-8">
-    <div id="header-logo-container" class="flex items-center gap-4">
-        <div id="desktop-logo-wrapper" class="items-center gap-2 text-xl hidden lg:flex">
-            <a id="desktop-repo-link" href="https://pxltr30.github.io/pxltr30/" class="font-bold no-underline hover:underline flex items-center gap-1">
-                <div id="logo-text-user">pxltr30</div>
-            </a>
-            <div id="logo-text-separator" class="text-text-light">/</div>
-            <a id="desktop-home-link" href="/" class="font-bold no-underline hover:underline text-heading flex items-center gap-1">
-                <div id="logo-text-project">Echo</div>
-            </a>
-        </div>
-        <div id="mobile-logo-wrapper" class="flex items-center gap-2 text-xl lg:hidden">
-            <a id="mobile-home-link" href="/" class="font-bold no-underline hover:underline flex items-center gap-1">
-                <div id="logo-text-user">pxltr30</div>
-                <div id="logo-text-separator">/</div>
-                <div id="logo-text-project" class="text-heading">Echo</div>
-            </a>
-        </div>
-    </div>
-    <div id="desktop-navigation" class="hidden items-center gap-3 lg:flex">
-        <a href="/" class="text-text-light hover:text-heading no-underline">home</a>
-        <a href="/about.html" class="text-text-light hover:text-heading no-underline">about</a>
-        <a href="/services/index" class="text-text-light hover:text-heading no-underline">services</a>
-        <a href="/projects/index" class="text-text-light hover:text-heading no-underline">projects</a>
-        <a href="/thoughts/index" class="text-text-light hover:text-heading no-underline">blog</a>
-        <a href="/#connect-section" class="text-text-light hover:text-heading no-underline">connect</a>
-    </div>
-    <button id="mobile-menu-button" class="lg:hidden p-2 text-text-light hover:text-heading">
-        <i id="mobile-menu-icon" class="fa-solid fa-bars h-6 w-6"></i>
-    </button>
-</header>
+<style>
+    .nav-glass {
+        background: rgba(74, 62, 56, 0.8) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(61, 135, 166, 0.3);
+    }
+    .nav-item-glow:hover {
+        text-shadow: 0 0 10px rgba(61, 135, 166, 0.8);
+        color: #3D87A6 !important;
+    }
+    .command-tag {
+        font-size: 0.65rem;
+        background: rgba(224, 122, 95, 0.2);
+        color: #E07A5F;
+        padding: 2px 6px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        margin-right: 8px;
+    }
+</style>
 
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
-<nav id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-surface shadow-lg z-50 p-6 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
-    <div class="flex items-center justify-between mb-6">
-        <h3 class="text-lg font-bold text-heading">Menu</h3>
-        <button id="close-mobile-menu-button" class="text-text-light">
-            <i class="fa-solid fa-times h-6 w-6"></i>
+<header id="site-header" class="sticky top-0 z-50 nav-glass p-4 px-6 md:px-12 transition-all duration-300">
+    <div class="flex items-center justify-between max-w-7xl mx-auto">
+        
+        <div class="flex items-center gap-2">
+            <span class="text-accent font-bold">$</span>
+            <a href="/" class="group flex items-center gap-1 font-mono text-xl tracking-tighter">
+                <span class="text-text">pxltr30</span>
+                <span class="text-heading">/</span>
+                <span class="text-accent group-hover:animate-pulse">Echo</span>
+            </a>
+        </div>
+
+        <nav id="desktop-navigation" class="hidden lg:flex items-center gap-8">
+            <a href="/" class="nav-item-glow text-sm font-mono text-text-light transition-colors flex items-center">
+                <span class="command-tag">01</span>home
+            </a>
+            <a href="/projects/index" class="nav-item-glow text-sm font-mono text-text-light transition-colors flex items-center">
+                <span class="command-tag">02</span>projects
+            </a>
+            <a href="/thoughts/index" class="nav-item-glow text-sm font-mono text-text-light transition-colors flex items-center">
+                <span class="command-tag">03</span>blog
+            </a>
+            <a href="/#connect-section" class="inline-flex items-center justify-center rounded border border-accent/50 px-4 py-1 text-xs font-mono text-accent hover:bg-accent hover:text-bg transition-all">
+                EXECUTE_CONTACT.sh
+            </a>
+        </nav>
+
+        <button id="mobile-menu-button" class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none">
+            <div class="w-6 h-0.5 bg-accent"></div>
+            <div class="w-4 h-0.5 bg-text-light ml-auto"></div>
+            <div class="w-6 h-0.5 bg-accent"></div>
         </button>
     </div>
-    <div class="flex flex-col gap-4">
-        <a href="/" class="text-text-light no-underline">home</a>
-        <a href="/about.html" class="text-text-light no-underline">about</a>
-        <a href="/services/index" class="text-text-light no-underline">services</a>
-        <a href="/projects/index" class="text-text-light no-underline">projects</a>
+</header>
+
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-bg/95 z-[60] hidden flex-col p-8 transition-all duration-500 opacity-0 overflow-y-auto">
+    <div class="flex justify-between items-center mb-12">
+        <span class="text-accent font-mono text-sm uppercase tracking-widest">// System Menu</span>
+        <button id="close-mobile-menu-button" class="text-heading text-2xl font-mono hover:rotate-90 transition-transform">
+            [X]
+        </button>
     </div>
-</nav>
+    
+    <div class="flex flex-col gap-8 text-3xl font-mono">
+        <a href="/" class="mobile-nav-link text-text hover:text-accent flex items-baseline gap-4">
+            <span class="text-xs text-heading">#01</span> Home
+        </a>
+        <a href="/about.html" class="mobile-nav-link text-text hover:text-accent flex items-baseline gap-4">
+            <span class="text-xs text-heading">#02</span> About
+        </a>
+        <a href="/projects/index" class="mobile-nav-link text-text hover:text-accent flex items-baseline gap-4">
+            <span class="text-xs text-heading">#03</span> Projects
+        </a>
+        <a href="/thoughts/index" class="mobile-nav-link text-text hover:text-accent flex items-baseline gap-4">
+            <span class="text-xs text-heading">#04</span> Blog
+        </a>
+        <a href="/#connect-section" class="mobile-nav-link text-text hover:text-accent flex items-baseline gap-4">
+            <span class="text-xs text-heading">#05</span> Connect
+        </a>
+    </div>
+
+    <div class="mt-auto pt-12 border-t border-border/30">
+        <p class="text-[10px] font-mono text-text-light/40 uppercase tracking-[0.3em]">Status: Operational</p>
+        <p class="text-[10px] font-mono text-text-light/40 uppercase tracking-[0.3em]">Location: Martinez, GA</p>
+    </div>
+</div>
 `;
 
-// Inject the HTML
+// Injection
 document.getElementById('navbar-container').innerHTML = navbarHTML;
 
-// Initialize Menu Logic
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const closeMobileMenuButton = document.getElementById('close-mobile-menu-button');
-const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-const mobileMenu = document.getElementById('mobile-menu');
+// Logic
+const openBtn = document.getElementById('mobile-menu-button');
+const closeBtn = document.getElementById('close-mobile-menu-button');
+const overlay = document.getElementById('mobile-menu-overlay');
 
-const toggleMenu = () => {
-    mobileMenuOverlay.classList.toggle('hidden');
-    mobileMenu.classList.toggle('translate-x-full');
-    document.body.classList.toggle('overflow-hidden');
+const toggle = () => {
+    const isHidden = overlay.classList.contains('hidden');
+    if (isHidden) {
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.add('opacity-100'), 10);
+        document.body.style.overflow = 'hidden';
+    } else {
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => overlay.classList.add('hidden'), 500);
+        document.body.style.overflow = 'auto';
+    }
 };
 
-if (mobileMenuButton) mobileMenuButton.onclick = toggleMenu;
-if (closeMobileMenuButton) closeMobileMenuButton.onclick = toggleMenu;
-if (mobileMenuOverlay) mobileMenuOverlay.onclick = toggleMenu;
+if (openBtn) openBtn.onclick = toggle;
+if (closeBtn) closeBtn.onclick = toggle;
