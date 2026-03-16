@@ -2,7 +2,7 @@ export const Footer = {
     render() {
         return `
             <footer id="site-footer" class="mt-16 border-t border-border bg-surface py-12">
-                <div id="footer-container" class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+                <div id="footer-container" class="mx-auto max-w-7xl px-10 md:px-10 lg:px-10">
                     <div id="footer-grid" class="grid grid-cols-1 gap-12 md:grid-cols-3">
                         <!-- Brand -->
                         <div id="footer-brand" class="flex flex-col gap-4">

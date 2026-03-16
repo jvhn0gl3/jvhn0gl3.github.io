@@ -1,7 +1,7 @@
 export const Header = {
     render() {
         return `
-            <header id="site-header" class="sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-border bg-surface p-4 px-4 md:px-8">
+            <header id="site-header" class="sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-border bg-surface p-4 px-10 md:px-10">
                 <div id="header-logo-container" class="flex items-center gap-4">
                     <!-- Desktop Logo -->
                     <div id="desktop-logo-wrapper" class="items-center gap-2 text-xl hidden lg:flex">
