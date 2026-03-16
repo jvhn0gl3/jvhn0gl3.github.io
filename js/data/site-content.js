@@ -1,0 +1,331 @@
+export const content = {
+    // Site metadata
+    site: {
+        title: 'Echo | John Ogletree - Digital Creator & Designer',
+        description: 'Welcome to Echo, the personal portfolio of John Ogletree. Explore my creations in web design, development, and digital strategy.',
+        keywords: 'John Ogletree, Portfolio, Web Developer, UI/UX Designer, Digital Creator, Astro, JavaScript, Georgia',
+        author: 'John Ogletree',
+        url: 'https://john-ogletree.me/',
+        socialPreview: 'https://example.com/social-preview.png'
+    },
+
+    // Navigation
+    navigation: {
+        logo: {
+            user: 'pxltr30',
+            project: 'Echo'
+        },
+        links: [
+            { label: 'home', url: '/' },
+            { label: 'about', url: '/about.html' },
+            { label: 'services', url: '/services/index' },
+            { label: 'pricing', url: '/pricing' },
+            { label: 'store', url: '/store' },
+            { label: 'projects', url: '/projects/index' },
+            { label: 'blog', url: '/thoughts/index' },
+            { label: 'connect', url: '/#connect-section' },
+            { label: 'docs', url: '/docs' },
+            { label: 'resume', url: '/resume/index' },
+            { label: 'directory', url: '/sitemap.xml' }
+        ]
+    },
+
+    // Hero section
+    hero: {
+        title: {
+            prefix: 'Crafting',
+            highlight1: 'Digital',
+            highlight2: 'Precision',
+            suffix: 'Solutions with'
+        },
+        description: 'Welcome to Echo, the personal portfolio of John Ogletree. I build modern, high-performance web experiences that blend aesthetic design with technical excellence.',
+        cta: {
+            primary: {
+                text: 'Explore Projects',
+                url: '/projects/index'
+            },
+            secondary: {
+                text: 'Get in Touch',
+                url: '/#connect-section'
+            }
+        }
+    },
+
+    // Profile section
+    profile: {
+        heading: 'Profile',
+        name: 'John Ogletree',
+        handle: '@pxltr30',
+        bioLink: {
+            text: 'More About Me',
+            url: '/about.html'
+        },
+        socialLinks: [
+            { icon: 'fa-brands fa-github', url: 'https://github.com/pxltr30', label: 'GitHub' },
+            { icon: 'fa-brands fa-linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
+            { icon: 'fa-brands fa-x-twitter', url: 'https://twitter.com', label: 'X/Twitter' }
+        ],
+        stats: [
+            { label: 'Repos', value: '42', description: 'Public repositories' },
+            { label: 'Contribs', value: '1480', description: 'Contributions this year' },
+            { label: 'Followers', value: '215', description: 'GitHub followers' }
+        ],
+        languages: [
+            { name: 'JavaScript', color: '#f1e05a', percent: 45 },
+            { name: 'TypeScript', color: '#3178c6', percent: 30 },
+            { name: 'Java', color: '#b07219', percent: 15 }
+        ],
+        skills: [
+            { name: 'UI Design', icon: 'fa-solid fa-layer-group', progress: 90 },
+            { name: 'UX Research', icon: 'fa-solid fa-magnifying-glass', progress: 75 },
+            { name: 'Prototyping', icon: 'fa-solid fa-code', progress: 85 },
+            { name: 'Frontend Dev', icon: 'fa-solid fa-terminal', progress: 80 }
+        ]
+    },
+
+    // Services section
+    services: {
+        heading: 'Capabilities Overview',
+        items: [
+            {
+                icon: 'fa-solid fa-laptop-code',
+                title: 'Web Design & Development',
+                description: 'Crafting responsive, high-performance websites from scratch. I focus on clean code and user-centric design to build digital experiences that work beautifully on any device.'
+            },
+            {
+                icon: 'fa-solid fa-wand-magic-sparkles',
+                title: 'Interactive Prototyping',
+                description: 'Bringing ideas to life with high-fidelity, clickable prototypes. This crucial step allows for user testing and validation before a single line of code is written.'
+            },
+            {
+                icon: 'fa-solid fa-chess',
+                title: 'Digital Strategy & Consultation',
+                description: 'Leveraging user research and analytics to help you make informed decisions. I provide insights that align your digital presence with your business goals for measurable success.'
+            }
+        ],
+        cta: {
+            text: 'View All Services',
+            url: '/services/index'
+        }
+    },
+
+    // Projects section
+    projects: {
+        heading: 'Creations Overview',
+        items: [
+            {
+                title: 'Echo - Personal Portfolio',
+                description: 'The very website you are on. A fully responsive personal hub built with Astro, showcasing a blend of design and modern web technologies.',
+                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
+                imageAlt: 'Abstract code on a screen',
+                tags: [
+                    { name: 'Astro', bgColor: 'rgba(224,122,95,0.15)', color: '#B35F48' },
+                    { name: 'CSS', bgColor: 'rgba(38,139,210,0.15)', color: '#268BD2' },
+                    { name: 'JavaScript', bgColor: 'rgba(181,137,0,0.2)', color: '#b58900' }
+                ]
+            },
+            {
+                title: 'QuantumLeap - SaaS Dashboard',
+                description: 'A UI/UX concept for a next-generation analytics platform, focusing on data visualization and intuitive user workflows.',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+                imageAlt: 'Analytics dashboard with charts and graphs',
+                tags: [
+                    { name: 'Figma', bgColor: 'rgba(163,55,240,0.1)', color: '#8327c3' },
+                    { name: 'UI/UX', bgColor: 'rgba(61,135,166,0.15)', color: '#3D87A6' },
+                    { name: 'Prototyping', bgColor: 'rgba(188,71,73,0.15)', color: '#BC4749' }
+                ]
+            },
+            {
+                title: 'CodeGenius - AI Assistant UI',
+                description: 'An interface design for an AI-powered code completion tool, designed to be unobtrusive yet powerful for developers.',
+                image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop',
+                imageAlt: 'Laptop with code and abstract shapes',
+                tags: [
+                    { name: 'UI Design', bgColor: 'rgba(42,161,152,0.15)', color: '#2AA198' },
+                    { name: 'UX Research', bgColor: 'rgba(203,75,22,0.15)', color: '#CB4B16' }
+                ]
+            }
+        ],
+        cta: {
+            text: 'View All Projects',
+            url: '/projects/index'
+        }
+    },
+
+    // Connect section
+    connect: {
+        heading: 'Connect',
+        contact: {
+            title: 'Contact Me',
+            description: 'Have a question or a project in mind? Let\'s talk. I\'m always open to discussing new ideas and opportunities.',
+            form: {
+                name: {
+                    label: 'Name',
+                    placeholder: 'Your name',
+                    required: true
+                },
+                email: {
+                    label: 'Email',
+                    placeholder: 'your.email@example.com',
+                    required: true
+                },
+                message: {
+                    label: 'Message',
+                    placeholder: 'Tell me about your project...',
+                    rows: 5,
+                    required: true
+                },
+                submit: 'Send Message'
+            }
+        },
+        newsletter: {
+            title: 'Join My Newsletter',
+            description: 'Subscribe to receive updates on my latest projects, articles, and design resources directly in your inbox. No spam, ever.',
+            form: {
+                email: {
+                    label: 'Email Address',
+                    placeholder: 'your.email@example.com',
+                    required: true
+                },
+                submit: 'Subscribe'
+            },
+            privacy: 'Your privacy is important. I\'ll never share your email.'
+        }
+    },
+
+    // Blog section
+    blog: {
+        heading: 'Log Overview',
+        items: [
+            {
+                url: '/thoughts/post-slug-1',
+                meta: 'Film Review · 6 min read',
+                title: 'Dune: A Masterclass in World-Building',
+                excerpt: "Denis Villeneuve's adaptation of the sci-fi epic is a cinematic triumph, blending stunning visuals with a deeply resonant narrative.",
+                tags: [
+                    { name: 'Film', bgColor: 'rgba(106,153,78,0.2)', color: '#6A994E' },
+                    { name: 'Sci-Fi', bgColor: 'rgba(108,113,196,0.15)', color: '#6C71C4' },
+                    { name: 'Review', bgColor: 'rgba(108,117,125,0.2)', color: '#6c757d' }
+                ]
+            },
+            {
+                url: '/thoughts/post-slug-2',
+                meta: 'Tech Review · 8 min read',
+                title: "The M4 AstroBook: A Developer's Dream?",
+                excerpt: "After a month with Apple's latest hardware, I'm sharing my thoughts on its performance and suitability for web development.",
+                tags: [
+                    { name: 'Tech', bgColor: 'rgba(0,95,115,0.15)', color: '#005f73' },
+                    { name: 'Apple', bgColor: 'rgba(147,161,161,0.2)', color: '#839496' },
+                    { name: 'Review', bgColor: 'rgba(108,117,125,0.2)', color: '#6c757d' }
+                ]
+            },
+            {
+                url: '/thoughts/post-slug-3',
+                meta: 'Personal Essay · 5 min read',
+                title: 'Finding Creative Flow in Augusta',
+                excerpt: 'How the quiet charm of Martinez and the surrounding area has reshaped my daily process and inspiration.',
+                tags: [
+                    { name: 'Life', bgColor: 'rgba(217,91,138,0.15)', color: '#D95B8A' },
+                    { name: 'Creativity', bgColor: 'rgba(108,113,196,0.2)', color: '#6C71C4' },
+                    { name: 'Georgia', bgColor: 'rgba(253,158,116,0.2)', color: '#E4865B' }
+                ]
+            }
+        ],
+        cta: {
+            text: 'View All Posts',
+            url: '/thoughts/index'
+        }
+    },
+
+    // Resume section
+    resume: {
+        heading: 'Credentials Overview',
+        experience: {
+            title: 'Experience',
+            items: [
+                { role: 'Senior Product Designer', details: 'Innovate Inc. | 2022 - Present' },
+                { role: 'UX/UI Designer', details: 'Creative Solutions | 2019 - 2022' },
+                { role: 'Junior Web Developer', details: 'Tech Forward LLC | 2018 - 2019' }
+            ]
+        },
+        education: {
+            title: 'Education',
+            items: [
+                { degree: 'B.S. in Computer Science', details: 'Georgia Institute of Technology | 2018' }
+            ]
+        },
+        awards: {
+            title: 'Awards',
+            items: [
+                { title: '"Best UI" Designathon', details: 'Awwwards Interactive | 2023' }
+            ]
+        },
+        cta: {
+            text: 'View Full Résumé',
+            url: '/resume/index'
+        }
+    },
+
+    // FAQ section
+    faq: {
+        heading: 'Frequently Asked Questions',
+        items: [
+            {
+                question: 'What is your current availability for new projects?',
+                answer: 'I am currently available for new freelance projects and contract roles. If you have an interesting challenge, feel free to reach out via the contact form above.'
+            },
+            {
+                question: 'What technologies are you most excited about right now?',
+                answer: "I'm particularly excited about the evolution of edge computing and frameworks like Astro. On the design front, I'm closely following advancements in generative AI tools."
+            },
+            {
+                question: 'Where are you located?',
+                answer: 'I am based in Martinez, Georgia, and am available for remote work globally. I am also open to hybrid opportunities in the Augusta metropolitan area.'
+            },
+            {
+                question: 'Can we see more of your work?',
+                answer: 'Absolutely! You can view a more extensive collection of my work on the dedicated <a href="/projects/index" class="text-accent underline hover:text-heading transition-colors">creations page</a>.'
+            }
+        ]
+    },
+
+    // Footer
+    footer: {
+        brand: {
+            name: 'Echo',
+            icon: 'fa-solid fa-book-open',
+            tagline: 'Building the next generation of digital experiences through design, code, and strategy.'
+        },
+        socialLinks: [
+            { icon: 'fa-brands fa-github', url: 'https://github.com/pxltr30', label: 'GitHub' },
+            { icon: 'fa-brands fa-linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
+            { icon: 'fa-brands fa-x-twitter', url: 'https://twitter.com', label: 'X/Twitter' },
+            { icon: 'fa-solid fa-envelope', url: 'mailto:contact@john-ogletree.me', label: 'Email' }
+        ],
+        navigation: {
+            title: 'Navigation',
+            links: [
+                { label: 'home', url: '/' },
+                { label: 'about', url: '/about.html' },
+                { label: 'services', url: '/services/index' },
+                { label: 'projects', url: '/projects/index' },
+                { label: 'blog', url: '/thoughts/index' },
+                { label: 'resume', url: '/resume/index' }
+            ]
+        },
+        status: {
+            title: 'System Status',
+            indicator: 'all systems operational',
+            lastDeployed: 'Feb 20, 2026'
+        },
+        copyright: {
+            year: '2026',
+            name: 'John Ogletree',
+            message: 'All rights reserved. Built with precision.'
+        },
+        legal: [
+            { label: 'Privacy Policy', url: '#' },
+            { label: 'Terms of Service', url: '#' }
+        ]
+    }
+};

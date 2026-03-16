@@ -1,32 +1,35 @@
+import { content } from '../data/content.js';
+
 export const Header = {
     render() {
+        const nav = content.navigation;
         return `
             <header class="sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-border bg-surface p-4 px-4 md:px-8">
                 <div class="flex items-center gap-4">
                     <!-- Desktop Logo -->
                     <div class="items-center gap-2 text-xl hidden lg:flex">
                         <a href="https://pxltr30.github.io/pxltr30/" class="font-bold no-underline hover:underline flex items-center gap-1">
-                            <span class="text-text">pxltr30</span>
+                            <span class="text-text">${nav.logo.user}</span>
                         </a>
                         <span class="text-text-light">/</span>
                         <a href="/" class="font-bold no-underline hover:underline text-heading flex items-center gap-1">
-                            <span>Echo</span>
+                            <span>${nav.logo.project}</span>
                         </a>
                     </div>
                     
                     <!-- Mobile Logo -->
                     <div class="flex items-center gap-2 text-xl lg:hidden">
                         <a href="/" class="font-bold no-underline hover:underline flex items-center gap-1">
-                            <span class="text-text">pxltr30</span>
+                            <span class="text-text">${nav.logo.user}</span>
                             <span class="text-text-light">/</span>
-                            <span class="text-heading">Echo</span>
+                            <span class="text-heading">${nav.logo.project}</span>
                         </a>
                     </div>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden items-center gap-3 lg:flex">
-                    ${this.navLinks.map(link => `
+                    ${nav.links.map(link => `
                         <a href="${link.url}" class="text-text-light hover:text-heading no-underline transition-colors duration-200">${link.label}</a>
                     `).join('')}
                 </div>
@@ -49,25 +52,11 @@ export const Header = {
                     </button>
                 </div>
                 <div class="flex flex-col gap-4">
-                    ${this.navLinks.map(link => `
+                    ${nav.links.map(link => `
                         <a href="${link.url}" class="text-text-light hover:text-heading no-underline transition-colors duration-200">${link.label}</a>
                     `).join('')}
                 </div>
             </nav>
         `;
-    },
-
-    navLinks: [
-        { label: 'home', url: '/' },
-        { label: 'about', url: '/about.html' },
-        { label: 'services', url: '/services/index' },
-        { label: 'pricing', url: '/pricing' },
-        { label: 'store', url: '/store' },
-        { label: 'projects', url: '/projects/index' },
-        { label: 'blog', url: '/thoughts/index' },
-        { label: 'connect', url: '/#connect-section' },
-        { label: 'docs', url: '/docs' },
-        { label: 'resume', url: '/resume/index' },
-        { label: 'directory', url: '/sitemap.xml' }
-    ]
+    }
 };
